@@ -1,11 +1,15 @@
 import React from 'react'
-import logoImage from './../../public/moviment-academia-assets/Home/Header/logo/Logo.svg'
-import MenuHeader from './../../site/header/menuheader'
+import MenuHeader from './components/Home/header/menuheader'
+import BodyHome from './components/Home/body/BodyHome'
+import TreinoComponent from './components/Treino/TreinoHome'
 const page = () => {
   return (
-    <div>
+    <div style={{ overflow: 'hidden' }}>
       <MenuHeader />
+      <BodyHome />
     </div>
+
+    //<TreinoComponent/>
   )
 }
 

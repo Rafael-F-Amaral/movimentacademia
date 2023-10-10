@@ -1,0 +1,8 @@
+.HomeBody {
+    background-image: url("../../../../../public/moviment-academia-assets/Home/Imagens/background-home.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
