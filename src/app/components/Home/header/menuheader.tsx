@@ -7,10 +7,15 @@ import Navbar from 'react-bootstrap/Navbar';
 
 const Logo = {
     width: '6em'
-}
+};
+
 const backgroundMenu = {
     backgroundColor: 'black',
-}
+    borderBottom: '2px solid #2A354B',
+    display: 'flex', // Adicionando flex display
+    justifyContent: 'center', // Centralizando horizontalmente
+    alignItems: 'center', // Centralizando verticalmente
+};
 
 const orangePipeStyle = {
     color: '#EC3138',
@@ -19,53 +24,71 @@ const orangePipeStyle = {
     transform: 'rotate(10deg)',
     display: 'inline-block',
     marginBottom: '-5px'
-}
+};
 
 const letterColor = {
-    color: 'white',
-}
+    color: 'white'
+};
 
 function CollapsibleExample() {
     const [activeMenu, setActiveMenu] = useState<null | string>(null);
 
     const handleMenuClick = (menu: string) => {
-        setActiveMenu(menu === activeMenu ? null : menu);
-    };
-
+        setActiveMenu(menu);
+      };
 
     useEffect(() => {
-        const currentPath = window.location.pathname;
-        if (currentPath === '/home' || currentPath === '/') {
-            setActiveMenu('home');
-        }
+      const currentPath = window.location.pathname;
+      if (currentPath === '/home' || currentPath === '/') {
+        setActiveMenu('home'); // Defina o link 'home' como ativo
+      }
     }, []);
 
     return (
-        <div style={backgroundMenu}>
-            <Navbar  collapseOnSelect expand="lg" style={{ width: '100%', borderBottom: '2px solid #2A354B', }}>
+        <div style={backgroundMenu} className=" py-4">
+            <Navbar collapseOnSelect expand="lg" style={{ width: '100%' }}>
                 <Container>
-                    <Navbar.Brand href="#home"><img style={Logo} src='Logo.svg' alt="logo, logomarca da academia moviment de iracemápolis" /></Navbar.Brand>
+                    <Navbar.Brand href="#home">
+                        <img style={Logo} src="Logo.svg" alt="logo, logomarca da academia moviment de iracemápolis" />
+                    </Navbar.Brand>
 
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="teste responsive-navbar-nav ms-auto">
-                        <Nav className='me-auto'>
-
-                        </Nav>
+                        <Nav className="me-auto"></Nav>
                         <Nav style={{ textAlign: 'center', backgroundColor: 'black' }}>
-                            <Nav.Link style={letterColor} href="#home" onClick={() => handleMenuClick
-                                ('home')}>
+                            <Nav.Link
+                                style={letterColor}
+                                href="#home"
+                                onClick={() => handleMenuClick('home')}
+                            >
                                 {activeMenu === 'home' && <span style={orangePipeStyle}>|</span>} HOME
                             </Nav.Link>
-                            <Nav.Link style={letterColor} href="#treinos" onClick={() => handleMenuClick('treinos')}>
+                            <Nav.Link
+                                style={letterColor}
+                                href="#treinos"
+                                onClick={() => handleMenuClick('treinos')}
+                            >
                                 {activeMenu === 'treinos' && <span style={orangePipeStyle}>|</span>} TREINOS
                             </Nav.Link>
-                            <Nav.Link style={letterColor} href="#planos" onClick={() => handleMenuClick('planos')}>
+                            <Nav.Link
+                                style={letterColor}
+                                href="#planos"
+                                onClick={() => handleMenuClick('planos')}
+                            >
                                 {activeMenu === 'planos' && <span style={orangePipeStyle}>|</span>} PLANOS
                             </Nav.Link>
-                            <Nav.Link style={letterColor} href="#loja" onClick={() => handleMenuClick('loja')}>
+                            <Nav.Link
+                                style={letterColor}
+                                href="#loja"
+                                onClick={() => handleMenuClick('loja')}
+                            >
                                 {activeMenu === 'loja' && <span style={orangePipeStyle}>|</span>} LOJA
                             </Nav.Link>
-                            <Nav.Link style={letterColor} href="#agenda" onClick={() => handleMenuClick('agenda')}>
+                            <Nav.Link
+                                style={letterColor}
+                                href="#agenda"
+                                onClick={() => handleMenuClick('agenda')}
+                            >
                                 {activeMenu === 'agenda' && <span style={orangePipeStyle}>|</span>} AGENDA
                             </Nav.Link>
                         </Nav>
@@ -74,8 +97,6 @@ function CollapsibleExample() {
             </Navbar>
         </div>
     );
-
-
 }
 
 export default CollapsibleExample;

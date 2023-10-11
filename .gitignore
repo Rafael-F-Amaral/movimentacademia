@@ -33,3 +33,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+public/moviment-academia-assets/treinos/cards/personalizado/personalizado.jpgZone.Identifier
+public/moviment-academia-assets/treinos/cards/musculação/musculacao.pngZone.Identifier
+public/moviment-academia-assets/treinos/cards/aerobico/aerobico.pngZone.Identifier
+public/moviment-academia-assets/loja/imagens/produtos/whey/Whey.pngZone.Identifier
+public/moviment-academia-assets/loja/imagens/produtos/termogenico/termo.pngZone.Identifier
+public/moviment-academia-assets/loja/imagens/produtos/camiseta/camiseta.pngZone.Identifier
+public/moviment-academia-assets/Home/Imagens/background-home.pngZone.Identifier

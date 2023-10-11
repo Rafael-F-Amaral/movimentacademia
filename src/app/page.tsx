@@ -7,9 +7,9 @@ const page = () => {
     <div style={{ overflow: 'hidden' }}>
       <MenuHeader />
       <BodyHome />
+      <TreinoComponent />
     </div>
 
-    //<TreinoComponent/>
   )
 }
 
