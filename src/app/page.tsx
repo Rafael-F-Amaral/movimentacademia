@@ -5,10 +5,10 @@ import TreinoComponent from './components/Treino/TreinoHome'
 const page = () => {
   return (
     <div style={{ overflow: 'hidden' }}>
-      <MenuHeader />
-      <BodyHome />
       <TreinoComponent />
     </div>
+//<MenuHeader />
+//<BodyHome />
 
   )
 }

@@ -1,0 +1,88 @@
+.TreinoContainer {
+    background-color: #0E0F10;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #E8E6E3;
+}
+
+.CardMuscleText>h1, .CardAerobicText>h1, .CardCustomText>h1  {
+    font-size: 1.9rem;
+}
+
+.BodyTreinoText {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.TreinoCardsContainer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    margin: auto;
+    gap: 40px;
+}
+
+.CardMuscleTreino,
+.CardAerobicTreino,
+.CardCustomTreino {
+    border: 1px #E8E6E3 solid;
+    height: 30em;
+    width: 30%;
+
+}
+
+.CardMuscleTreino {
+    background-image: url(../../../../public/moviment-academia-assets/treinos/cards/musculação/musculacao.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.CardAerobicTreino {
+    background-image: url(../../../../public/moviment-academia-assets/treinos/cards/aerobico/aerobico.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.CardCustomTreino {
+    background-image: url(../../../../public/moviment-academia-assets/treinos/cards/personalizado/personalizado.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.CardCustomText,
+.CardMuscleText,
+.CardAerobicText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+/* Estilo para o texto da lista */
+.CardTextContent li {
+    list-style: none; /* Remover os marcadores de lista padrão */
+    font-size: 16px; /* Tamanho da fonte para o texto */
+    color: #E8E6E3; /* Cor do texto */
+}
+
+/* Estilo para a seta */
+.CardTextContent .Setas {
+    font-size: 25px; /* Tamanho da fonte para as setas */
+    margin-right: 15px; /* Espaço entre a seta e o texto */
+    transform: scaleX(2);
+}
+
+/* Alinhar verticalmente a seta e o texto */
+.CardTextContent .SetaTexto {
+    display: flex;
+    align-items: center;
+}
