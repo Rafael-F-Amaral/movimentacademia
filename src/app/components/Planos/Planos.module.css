@@ -1,0 +1,143 @@
+.MainContent {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+.TreinoContainer {
+    background-color: #0E0F10;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #E8E6E3;
+}
+
+
+.BodyTreinoText {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 5%;
+}
+
+.BodyTreinoText>div>h3 {
+    font-size: 22px;
+    margin: auto;
+    width: 80%;
+}
+
+.TreinoCardsContainer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    gap: 10px;
+    margin-top: 5%;
+}
+
+
+.CardMuscleTreino,
+.CardAerobicTreino,
+.CardCustomTreino {
+    border: 1px #E8E6E3 solid;
+    height: 35vw;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 2%;
+}
+
+.CardMuscleTreino {
+    background-image: url(../../../../public/moviment-academia-assets/planos/familia.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 60px;
+}
+
+.CardAerobicTreino {
+    background-image: url(../../../../public/moviment-academia-assets/planos/anual.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.CardCustomTreino {
+    background-image: url(../../../../public/moviment-academia-assets/planos/mensal.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 60px;
+
+}
+
+.CardCustomText,
+.CardMuscleText,
+.CardAerobicText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+.CardButton {
+    margin: auto;
+    display: inline-block;
+    padding: 1vw 1.5vw;
+    background-color: #EC3138;
+    color: #E8E6E3;
+    font-size: 0.7vw;
+    font-weight: 700;
+    max-width: 12vw;
+    max-height: 8vh;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 100% 100%, 0% 100%);
+    box-sizing: border-box;
+}
+
+
+
+.CardButton:hover {
+    background-color: #d62c32;
+
+}
+
+.CardButton:active {
+    background-color: #fd363d;
+
+}
+
+
+/* Estilo para o texto da lista */
+.CardTextContent li {
+    list-style: none;
+    /* Remover os marcadores de lista padrão */
+    font-size: 16px;
+    /* Tamanho da fonte para o texto */
+    color: #E8E6E3;
+    /* Cor do texto */
+}
+
+/* Estilo para a seta */
+.CardTextContent .Setas {
+    font-size: 25px;
+    /* Tamanho da fonte para as setas */
+    margin-right: 15px;
+    /* Espaço entre a seta e o texto */
+    transform: scaleX(2);
+}
+
+/* Alinhar verticalmente a seta e o texto */
+.CardTextContent .SetaTexto {
+    display: flex;
+    align-items: center;
+}

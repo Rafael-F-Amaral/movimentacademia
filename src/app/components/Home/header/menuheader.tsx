@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import TreinoHome from '../../Treino/TreinoHome'
 
 const Logo = {
     width: '6em'
@@ -65,7 +66,7 @@ function CollapsibleExample() {
                             </Nav.Link>
                             <Nav.Link
                                 style={letterColor}
-                                href="#treinos"
+                                href='#TreinoHome'
                                 onClick={() => handleMenuClick('treinos')}
                             >
                                 {activeMenu === 'treinos' && <span style={orangePipeStyle}>|</span>} TREINOS
