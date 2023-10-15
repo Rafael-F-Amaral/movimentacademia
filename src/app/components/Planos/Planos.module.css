@@ -36,7 +36,6 @@
     justify-content: center;
     margin: auto;
     gap: 10px;
-    margin-top: 5%;
 }
 
 
@@ -50,6 +49,12 @@
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom: 2%;
+
+}
+
+.CardMuscleTreino,
+.CardCustomTreino{
+    margin-top: 40px;
 }
 
 .CardMuscleTreino {
@@ -57,7 +62,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 60px;
+    margin-top: 60 px;
 }
 
 .CardAerobicTreino {
@@ -72,7 +77,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 60px;
+    margin-top: 60 px;
 
 }
 
@@ -117,27 +122,3 @@
 }
 
 
-/* Estilo para o texto da lista */
-.CardTextContent li {
-    list-style: none;
-    /* Remover os marcadores de lista padrão */
-    font-size: 16px;
-    /* Tamanho da fonte para o texto */
-    color: #E8E6E3;
-    /* Cor do texto */
-}
-
-/* Estilo para a seta */
-.CardTextContent .Setas {
-    font-size: 25px;
-    /* Tamanho da fonte para as setas */
-    margin-right: 15px;
-    /* Espaço entre a seta e o texto */
-    transform: scaleX(2);
-}
-
-/* Alinhar verticalmente a seta e o texto */
-.CardTextContent .SetaTexto {
-    display: flex;
-    align-items: center;
-}

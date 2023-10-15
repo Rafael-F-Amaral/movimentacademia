@@ -7,11 +7,11 @@ import Planos from './components/Planos/Planos'
 const page = () => {
   return (
     <div style={{ overflow: 'hidden' }}>
+      <MenuHeader />
+      <BodyHome />
+      <TreinoComponent />
       <Planos />
     </div>
-      //<TreinoComponent />
-    //<MenuHeader />
-    //<BodyHome />
 
   )
 }

@@ -10,13 +10,19 @@ const Logo = {
     width: '6em'
 };
 
-const backgroundMenu = {
+const backgroundMenu:any = {
     backgroundColor: 'black',
     borderBottom: '2px solid #2A354B',
-    display: 'flex', // Adicionando flex display
-    justifyContent: 'center', // Centralizando horizontalmente
-    alignItems: 'center', // Centralizando verticalmente
-};
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'fixed', // Defina a posição como 'fixed' para tornar o cabeçalho fixo no topo
+    top: '0',
+    left: '0',
+    right: '0',
+    zIndex: '999', // O z-index define a ordem de empilhamento, ajuste conforme necessário
+  };
+  
 
 const orangePipeStyle = {
     color: '#EC3138',
@@ -36,17 +42,17 @@ function CollapsibleExample() {
 
     const handleMenuClick = (menu: string) => {
         setActiveMenu(menu);
-      };
+    };
 
     useEffect(() => {
-      const currentPath = window.location.pathname;
-      if (currentPath === '/home' || currentPath === '/') {
-        setActiveMenu('home'); // Defina o link 'home' como ativo
-      }
+        const currentPath = window.location.pathname;
+        if (currentPath === '/home' || currentPath === '/') {
+            setActiveMenu('home'); // Defina o link 'home' como ativo
+        }
     }, []);
 
     return (
-        <div style={backgroundMenu} className=" py-4">
+        <div style={backgroundMenu} className="py-4">
             <Navbar collapseOnSelect expand="lg" style={{ width: '100%' }}>
                 <Container>
                     <Navbar.Brand href="#home">
@@ -101,6 +107,7 @@ function CollapsibleExample() {
 }
 
 export default CollapsibleExample;
+
 
 
 
