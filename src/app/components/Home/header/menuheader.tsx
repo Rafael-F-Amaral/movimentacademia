@@ -1,10 +1,9 @@
-"use client";
-import styles from './menuheader.module.css'
+"use client"
 import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import TreinoHome from '../../Treino/TreinoHome'
+// import styles from './menuheader.module.css'
 
 const Logo = {
     width: '6em'
@@ -16,11 +15,11 @@ const backgroundMenu:any = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    position: 'fixed', // Defina a posição como 'fixed' para tornar o cabeçalho fixo no topo
+    position: 'fixed',
     top: '0',
     left: '0',
     right: '0',
-    zIndex: '999', // O z-index define a ordem de empilhamento, ajuste conforme necessário
+    zIndex: '999',
   };
   
 
@@ -47,7 +46,7 @@ function CollapsibleExample() {
     useEffect(() => {
         const currentPath = window.location.pathname;
         if (currentPath === '/home' || currentPath === '/') {
-            setActiveMenu('home'); // Defina o link 'home' como ativo
+            setActiveMenu('home');
         }
     }, []);
 
