@@ -51,6 +51,7 @@ export default function App() {
 
         setModalData(item);
         setModalOpen(true);
+        
     };
 
     const handleCloseModal = () => {
@@ -69,9 +70,10 @@ export default function App() {
                 description: 'Dasdsadasd',
                 additionalImage: [
                     '/moviment-academia-assets/loja/imagens/produtos/whey/Whey.png',
-                    '/moviment-academia-assets/loja/imagens/produtos/termogenico/termo.png',
+                ],
+                anotherImage: [
                     '/moviment-academia-assets/loja/imagens/produtos/whey/Whey.png',
-                    '/moviment-academia-assets/loja/imagens/produtos/whey/Whey.png',
+
                 ],
             },
         }, {
@@ -80,8 +82,19 @@ export default function App() {
             type: 'camiseta',
             modalContent: {
                 description: 'Descrição do Whey Protein',
-                additionalImage: '/moviment-academia-assets/loja/imagens/produtos/whey/Whey.png',
-                anotherImage: '/moviment-academia-assets/loja/imagens/produtos/whey/Whey.png',
+                additionalImage: [
+                    '/moviment-academia-assets/loja/imagens/produtos/whey/Whey.png',
+                    '/moviment-academia-assets/loja/imagens/produtos/termogenico/termo.png',
+                    '/moviment-academia-assets/loja/imagens/produtos/whey/Whey.png',
+                    '/moviment-academia-assets/loja/imagens/produtos/whey/Whey.png',
+                ],
+                anotherImage: [
+                    '/moviment-academia-assets/loja/imagens/produtos/whey/Whey.png',
+                    '/moviment-academia-assets/loja/imagens/produtos/termogenico/termo.png',
+                    '/moviment-academia-assets/loja/imagens/produtos/whey/Whey.png',
+                    '/moviment-academia-assets/loja/imagens/produtos/whey/Whey.png',
+                ],
+
 
             },
         }, {
