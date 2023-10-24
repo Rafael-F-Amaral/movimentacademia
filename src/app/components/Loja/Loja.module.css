@@ -3,6 +3,11 @@
 
 }
 
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
 .Body {
     position: relative;
     height: 100%;
@@ -148,6 +153,7 @@
     text-align: center;
     margin-top: 0.8rem;
 
+
 }
 
 .textCard div {
@@ -195,20 +201,20 @@
 
 /* Modal swiper */
 
-.mySwiperModule{
+.mySwiperModule {
     height: 50%;
     width: 50%;
 }
 
-.modalBody{
+.modalBody {
     display: flex;
     width: 50%;
     height: 800px;
 }
 
 
-.modalBody img{
+.modalBody img {
     width: 50%;
     display: flex;
-    
+
 }

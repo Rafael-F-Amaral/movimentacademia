@@ -4,14 +4,16 @@ import BodyHome from './components/Home/body/BodyHome'
 import TreinoComponent from './components/Treino/TreinoHome'
 import Planos from './components/Planos/Planos'
 import Loja from './components/Loja/Loja'
+import Agenda from './components/agenda/agenda'
 
 const page = () => {
   return (
     <div>
-      <Loja />
+      <Agenda />
     </div>
 
 )
+//<Loja />
 };
 {/* <BodyHome />
 <MenuHeader />
