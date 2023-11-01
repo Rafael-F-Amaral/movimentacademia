@@ -15,6 +15,10 @@
     margin: auto;
 }
 
+.main div{
+    margin: auto;
+}
+
 .mainTab {
     border: none;
     width: 50%;
@@ -29,7 +33,6 @@
 
 .tableHead table {
     width: 50%;
-    display: block;
     margin: auto;
 }
 

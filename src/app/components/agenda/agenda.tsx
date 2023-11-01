@@ -29,14 +29,14 @@ function FillExample() {
         >
             <div>
                 <Tabs
-                    defaultActiveKey="home"
+                    defaultActiveKey="imc"
                     id="fill-tab-example"
                     className={`mb-3 ${styles.mainTab}`}
                     fill
                 >
                     <Tab
-                        eventKey="home"
-                        title="Home"
+                        eventKey="agenda"
+                        title="AGENDA DE HORÁRIOS"
                         className={styles.contentTab}
                     >
                         <div className={styles.tableHead}>
@@ -79,23 +79,18 @@ function FillExample() {
                             </table></div>
                     </Tab>
                     <Tab
-                        eventKey="profile"
-                        title="Profile"
+                        eventKey="imc"
+                        title="CALCULAR IMC"
                     >
                         Tab content for Profile
                     </Tab>
                     <Tab
-                        eventKey="longer-tab"
-                        title="Loooonger Tab"
+                        eventKey="CALORIAS"
+                        title="CALCULAR CALORIAS"
                     >
                         Tab content for Loooonger Tab
                     </Tab>
-                    <Tab
-                        eventKey="contact"
-                        title="Contact"
-                    >
-                        Tab content for Contact
-                    </Tab>
+
                 </Tabs>
             </div>
         </div>
