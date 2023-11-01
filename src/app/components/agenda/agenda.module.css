@@ -4,8 +4,6 @@
     border: red 1px solid;
 }
 
-.contentTab {}
-
 .main {
     display: flex;
     flex-direction: column;
