@@ -1,10 +1,81 @@
-.mainAgenda{
+.mainAgenda {
     width: 50%;
     margin: auto;
     border: red 1px solid;
-
 }
 
-.tabsMain{
-    color: red;
+.contentTab {}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+}
+
+.mainTab {
+    border: none;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.tableHead th td {
+    border: red 1px solid;
+}
+
+.tableHead table {
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+.thCell th {
+    border-bottom: white 2px solid;
+    border-right: white 2px solid;
+    text-align: center;
+    width: 100vh;
+    font-size: 15px;
+    height: 10vh;
+}
+
+.thCellBorder {
+    border-right: none !important;
+}
+
+.tdCellBorder {
+    border-right: none !important;
+}
+
+.tdCellBorder2 {
+    border-bottom: none !important;
+}
+
+.trCell>td {
+    border-right: white 2px solid;
+    border-bottom: white 2px solid;
+    text-align: center;
+    width: 100vh;
+    height: 10vh;
+}
+
+.trCell input {
+    width: 100%;
+    text-align: center;
+    font-style: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.Teste {
+    border-right: none !important;
+}
+
+.Teste2 {
+    border-bottom: none !important;
 }
