@@ -2,24 +2,35 @@
 
 import React, { useState } from 'react';
 import styles from './agenda.module.css'
-import Tab from 'react-bootstrap/Tab';
 import TabPane from 'react-bootstrap/TabPane';
 import Tabs from 'react-bootstrap/Tabs';
+import Select from './Components/agenda/Select/Select'
+import TableCell from './Components/agenda/table/tableCell';
 
 
 function FillExample() {
-    const [tableData, setTableData] = useState([
-        ['1', 'Inserir treinamento', 'Outro Dado 1', 'Outro Dado 1', 'Outro Dado 1', 'Outro Dado 1', 'Outro Dado 1', 'Outro Dado 1'],
-        ['Nome 2', 'Idade 2', 'Outro Dado 2', 'Outro Dado 2', 'Outro Dado 2', 'Outro Dado 2', 'Outro Dado 2', 'Outro Dado 2'],
-        ['Nome 2', 'Idade 2', 'Outro Dado 2', 'Outro Dado 2', 'Outro Dado 2', 'Outro Dado 2', 'Outro Dado 2', 'Outro Dado 2'],
-        ['Nome 2', 'Idade 2', 'Outro Dado 2', 'Outro Dado 2', 'Outro Dado 2', 'Outro Dado 2', 'Outro Dado 2', 'Outro Dado 2'],
-        ['Nome 2', 'Idade 2', 'Outro Dado 2', 'Outro Dado 2', 'Outro Dado 2', 'Outro Dado 2', 'Outro Dado 2', 'Outro Dado 2'],
-    ]);
-    const handleCellChange = (rowIndex: number, colIndex: number, value: string) => {
-        const updatedData = [...tableData];
-        updatedData[rowIndex][colIndex] = value;
-        setTableData(updatedData);
+    const colsValue = "10"; // Exemplo de uma string
+
+    const [textInputs, setTextInputs] = useState(['']); // Estado para armazenar os textos
+    const [text, setText] = useState(''); // Estado para controlar o texto a ser adicionado
+
+    const handleTextChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setText(event.target.value);
     };
+
+    const handleAddText = () => {
+        if (text.trim() !== '') {
+            setTextInputs([...textInputs, text]);
+            setText(''); // Limpa o campo de entrada
+        }
+    };
+
+    const handleDeleteText = (index: number) => {
+        const newInputs = [...textInputs];
+        newInputs.splice(index, 1);
+        setTextInputs(newInputs);
+    };
+
 
     return (
         <div
@@ -28,7 +39,7 @@ function FillExample() {
         >
             <div>
                 <Tabs
-                    defaultActiveKey="CALORIAS"
+                    defaultActiveKey="imc"
                     id="fill-tab-example"
                     className={`mb-3 ${styles.mainTab}`}
                     fill
@@ -55,25 +66,265 @@ function FillExample() {
                                         </th>
                                     </tr>
                                 </thead>
+
                                 <tbody>
-                                    {tableData.map((row, rowIndex) => (
-                                        <tr key={rowIndex} className={styles.trCell}>
-                                            {row.map((cellValue, colIndex) => (
-                                                <td
-                                                    key={colIndex}
-                                                    className={`${colIndex === 7 ? styles.Teste : ''} ${rowIndex === 4 ? styles.Teste2 : ''} ${styles.tdCell}`}
-                                                >
-                                                    <input
-                                                        type="text"
-                                                        value={cellValue}
-                                                        onChange={(e) =>
-                                                            handleCellChange(rowIndex, colIndex, e.target.value)
-                                                        }
-                                                    />
-                                                </td>
-                                            ))}
-                                        </tr>
-                                    ))}
+                                    <tr className={styles.trCell}>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <Select />
+                                        </td>
+                                        <td className={styles.tdCell}>
+                                            <TableCell />
+
+                                        </td>
+
+
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                                <tbody>
+                                    <tr className={styles.trCell}>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <Select />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr className={styles.trCell}>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <Select />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr className={styles.trCell}>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <Select />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr className={styles.trCell}>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <Select />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={styles.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -85,59 +336,106 @@ function FillExample() {
                     >
                         <div className={styles.mainIMC}>
                             <div className={styles.contentImc}>
-                                <div>
-                                    <h2>SEU IMC</h2>
+                                <div className={styles.contentSeuImc}>
                                     <table>
-                                        <tr>
-                                            <th>IMC</th>
-                                            <th>STATUS DO PESO</th>
+                                        <tr style={{ borderBottom: 'none' }}>
+                                            <th style={{ borderBottom: 'none' }}>
+                                                <h2 style={{ textAlign: 'left', height: '1vw' }}>SEU IMC</h2>
+
+                                            </th>
                                         </tr>
                                         <tr>
-                                            <td>Abaixo de 19.5</td>
-                                            <td>Abaixo do peso</td>
+                                            <th style={{ borderRight: '1px #cacaca solid' }}>IMC</th>
+                                            <span></span>
+                                            <th style={{ paddingLeft: '2vw' }}>STATUS DO PESO</th>
                                         </tr>
                                         <tr>
-                                            <td>18,5 - 24,5</td>
-                                            <td>Saudável</td>
+                                            <td style={{ borderRight: '1px #cacaca solid' }}>Abaixo de 19.5</td>
+                                            <span></span>
+                                            <td style={{ paddingLeft: '2vw' }}>Abaixo do peso</td>
                                         </tr>
                                         <tr>
-                                            <td>25,0 - 29,9</td>
-                                            <td>Sobrepeso</td>
+                                            <td style={{ borderRight: '1px #cacaca solid' }}>18,5 - 24,5</td>
+                                            <span></span>
+
+                                            <td style={{ paddingLeft: '2vw' }}>Saudável</td>
                                         </tr>
                                         <tr>
-                                            <td>30,0 e acima</td>
-                                            <td>Obeso</td>
+                                            <td style={{ borderRight: '1px #cacaca solid' }}>25,0 - 29,9</td>
+                                            <span></span>
+
+                                            <td style={{ paddingLeft: '2vw' }}>Sobrepeso</td>
                                         </tr>
-                                        <caption><p>Taxa Metabólica Basal (TMB) / Índice de Massa Corporal (IMC) ? </p></caption>
+                                        <tr style={{ borderBottom: 'none' }}>
+                                            <td style={{ borderRight: '1px #cacaca solid', borderBottom: 'none' }}>30,0 e acima</td>
+                                            <span></span>
+
+                                            <td style={{ paddingLeft: '2vw', borderBottom: 'none' }}>Obeso</td>
+                                        </tr>
+                                        <caption>
+                                            <p>Taxa Metabólica Basal (TMB) / Índice de Massa Corporal (IMC) ?
+                                            </p>
+                                        </caption>
                                     </table>
                                 </div>
 
-                                <div>
-                                    <h3>Calcule seu IMC</h3>
-                                    <p>Ter um peso dentro do intervalo de peso ideal, ajuda a evitar o aparecimento de várias doenças crônicas, como diabetes e hipertensão.</p>
+                                <div className={styles.contentCalculeImc}>
 
                                     <table>
+                                        <h3>Calcule seu IMC</h3>
+                                        <p>Ter um peso dentro do intervalo de peso ideal, ajuda a evitar o aparecimento de várias doenças crônicas, como diabetes e hipertensão.</p>
                                         <tr>
                                             <th>ALTURA(CM)</th>
                                             <th>PESO/KG</th>
                                         </tr>
                                         <tr>
-                                            <td>175</td>
-                                            <td>90</td>
+                                            <td>
+                                                <p
+                                                    style={{
+                                                        borderBottom: '1px #cacaca solid',
+                                                        width: '70%'
+                                                    }}>
+                                                    175
+                                                </p>
+                                            </td>
+
+                                            <td>
+                                                <p
+                                                    style={{
+                                                        borderBottom: '1px #cacaca solid',
+                                                        width: '70%'
+                                                    }}>
+                                                    90
+                                                </p>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th>IDADE</th>
+
                                             <th>SEXO</th>
 
                                         </tr>
                                         <tr>
-                                            <td>35</td>
-                                            <td>HOMEM</td>
+                                            <td>
+                                                <p style={{
+                                                    borderBottom: '1px #cacaca solid',
+                                                    width: '80%'
+                                                }}>
+                                                    35
+                                                </p>
+                                            </td>
+
+                                            <td>
+                                                <p style={{
+                                                    borderBottom: '1px #cacaca solid',
+                                                    width: '80%'
+                                                }}>
+                                                    HOMEM
+                                                </p>
+                                            </td>
                                         </tr>
-                                        <tr>
-                                            <td>30,0 e acima</td>
-                                            <td>Obeso</td>
-                                        </tr>
+
+
                                         <tr>
                                             <th>SELECIONE UM FATOR DE ATIVIDADE</th>
                                         </tr>
@@ -155,17 +453,20 @@ function FillExample() {
                                         </button>
                                     </span>
                                 </div>
-                                <div>
+                            </div>
+                            <div className={styles.resultIMC}>
+                                <div className={styles.resultIMC2}>
                                     <img src="/moviment-academia-assets/agenda/imc/pessoa.svg" alt="imagem pessoa da academia moviment academia iracemápolis" />
-                                    <p>VOCÊ ESTÁ OBESO!</p>
-                                    <p>Seu ICM é de 31,62. Sua TMB está em 2.300 kcal/dia e TMB com seu fator  de atividade está em 2.800 kcal/dia ?</p>
+                                    <div>
+                                        <p>VOCÊ ESTÁ OBESO!</p>
+                                        <p>Seu ICM é de 31,62. Sua TMB está em 2.300 kcal/dia e TMB com seu fator  de atividade está em 2.800 kcal/dia ?</p>
+                                    </div>
                                 </div>
                             </div>
-
                         </div>
                     </TabPane>
 
-                    <TabPane
+                    {/* <TabPane
                         eventKey="CALORIAS"
                         title="CALCULAR CALORIAS"
                     >
@@ -234,11 +535,11 @@ function FillExample() {
                                 </div>
                             </div>
                         </div>
-                    </TabPane>
+                    </TabPane> */}
                 </Tabs>
             </div>
 
-        </div>
+        </div >
     );
 }
 

@@ -1,0 +1,10 @@
+.selectInput {
+    color: white;
+}
+
+.containerInput{
+    width: 50%;
+}
+.containerInput span{
+    margin-left: -10px;
+}
