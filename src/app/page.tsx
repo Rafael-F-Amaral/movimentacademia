@@ -4,7 +4,7 @@ import BodyHome from './components/Home/body/BodyHome'
 import TreinoComponent from './components/Treino/TreinoHome'
 import Planos from './components/Planos/Planos'
 import Loja from './components/Loja/Loja'
-import Agenda from './components/agenda/agenda'
+import Agenda from './components/agenda/ContainerTab'
 
 const page = () => {
   return (

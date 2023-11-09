@@ -1,0 +1,129 @@
+.mainIMC {
+    width: 60%;
+    margin: auto;
+}
+
+.contentImc {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+}
+
+.contentImc table {
+    width: 100%;
+
+}
+
+.contentImc {
+    width: 100%;
+    margin: auto;
+}
+
+.contentSeuImc td {
+    border-bottom: 1px #cacaca solid;
+    height: 8vh;
+
+}
+
+.contentSeuImc {
+    width: 100%;
+}
+
+.contentSeuImc th {
+    border-bottom: 1px #cacaca solid;
+    height: 5vh;
+
+}
+
+.contentSeuImc tr {
+    border-bottom: 1px #cacaca solid;
+
+}
+
+.contentCalculeImc {
+    width: 100%;
+}
+
+
+.contentCalculeImc table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.contentCalculeImc tr {
+    height: 5vh;
+    text-align: left;
+
+}
+
+.contentCalculeImc td {
+    text-align: left;
+
+}
+
+.selectInput {
+    width: 70%;
+    font-style: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.selectSexInput {
+    font-style: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+}
+
+.buttonAgenda {
+    background-color: #EC3138;
+    font-size: 100%;
+    font-weight: 700;
+    width: 28%;
+    height: 11%;
+    text-align: center;
+}
+
+.buttonAgenda:hover {
+    color: white;
+    background-color: #ea272d;
+}
+
+.resultIMC2 {
+    display: flex;
+    border: 1px #EC3138 solid;
+    padding: 10px;
+    gap: 20px;
+    margin: auto;
+    margin: 5px;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.resultIMC2 div {
+    width: 100%;
+}
+
+
+.iconePessoa {
+    width: 1.5vw;
+}
+
+.informaçãoAdicionalImage {
+    width: 1.5%;
+    margin-left: 5px;
+    margin-bottom: 5px;
+
+}
+
+.informaçãoAdicionalImage2 {
+    width: 3%;
+    margin-left: 5px;
+    margin-bottom: 5px;
+
+}

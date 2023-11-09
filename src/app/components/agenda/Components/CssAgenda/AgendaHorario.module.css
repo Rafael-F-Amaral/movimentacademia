@@ -1,0 +1,52 @@
+.tableHead th td {
+    border: red 1px solid;
+}
+
+.tableHead table {
+    width: 60%;
+    margin: auto;
+}
+
+.tableHead table {
+    width: 60%;
+    margin: auto;
+}
+
+.thCell th {
+    border-bottom: white 2px solid;
+    border-right: white 2px solid;
+    text-align: center;
+    width: 100vh;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 15px;
+    height: 10vh;
+}
+
+.tdCellBorder {
+    border-right: none !important;
+}
+
+.tdCellBorder2 {
+    border-bottom: none !important;
+}
+
+.trCell>td {
+    border-right: white 2px solid;
+    border-bottom: white 2px solid;
+    text-align: center;
+    width: 100vh;
+    height: 10vh;
+
+}
+
+.trCell input {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-style: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    outline: none;
+}

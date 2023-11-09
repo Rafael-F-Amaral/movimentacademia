@@ -1,0 +1,73 @@
+/*RESULTADO CALORIAS*/
+
+.mainCalorias {
+    display: flex;
+    width: 60%;
+    margin: auto;
+    gap: 5%;
+    font-size: 12px;
+    height: 60vh;
+}
+
+
+
+.resultadoContent {
+    border: 1px #E33636 solid;
+    width: 50%;
+    box-shadow: 7px 7px 0px -1px #E33636;
+    -webkit-box-shadow: 7px 7px 0px -1px #E33636;
+    -moz-box-shadow: 7px 7px 0px -1px #E33636;
+    border-radius: 2px;
+}
+
+.resultadoContent div {
+    width: 90%;
+    padding-top: 5%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.resultadoContent span {
+    background-color: #E33636;
+    height: 1px;
+    margin-bottom: 14px;
+}
+
+
+
+/*RESULTADO CALORIAS*/
+
+
+/*CALCULADORA CALORIAS*/
+
+.formerContent{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 50%;
+
+}
+
+
+.formerContent img {
+    width: 3%;
+    margin-left: 5px;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+.tableBody {
+    margin: auto;
+    width: 100%;
+    height: 30%;
+
+}
+
+.formerContent table{
+    width: 100%;
+}
+
+
+/*CALCULADORA CALORIAS*/

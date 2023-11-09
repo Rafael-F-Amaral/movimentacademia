@@ -1,59 +1,40 @@
 "use client"
 
 import React, { useState } from 'react';
-import styles from './agenda.module.css'
+import ContainerTab from './ContainerTab.module.css'
+import AgendaHorario from './Components/CssAgenda/AgendaHorario.module.css'
+import CalculoImc from './Components/CssAgenda/CalculoImc.module.css'
+import CalculoCalorias from './Components/CssAgenda/CalculoCalorias.module.css'
 import TabPane from 'react-bootstrap/TabPane';
 import Tabs from 'react-bootstrap/Tabs';
-import Form from 'react-bootstrap/Form';
 import Select from './Components/agenda/Select/Select'
 import TableCell from './Components/agenda/table/tableCell';
 
 
 function FillExample() {
-    const colsValue = "10"; // Exemplo de uma string
-
-    const [textInputs, setTextInputs] = useState(['']); // Estado para armazenar os textos
-    const [text, setText] = useState(''); // Estado para controlar o texto a ser adicionado
-
-    const handleTextChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setText(event.target.value);
-    };
-
-    const handleAddText = () => {
-        if (text.trim() !== '') {
-            setTextInputs([...textInputs, text]);
-            setText(''); // Limpa o campo de entrada
-        }
-    };
-
-    const handleDeleteText = (index: number) => {
-        const newInputs = [...textInputs];
-        newInputs.splice(index, 1);
-        setTextInputs(newInputs);
-    };
 
 
     return (
         <div
             className=
-            {styles.main}
+            {ContainerTab.main}
         >
             <div>
                 <Tabs
-                    defaultActiveKey="imc"
+                    defaultActiveKey="CALORIAS"
                     id="fill-tab-example"
-                    className={`mb-3 ${styles.mainTab}`}
+                    className={`mb-3 ${ContainerTab.mainTab}`}
                     fill
                 >
                     <TabPane
                         eventKey="agenda"
                         title="AGENDA DE HORÁRIOS"
-                        className={styles.contentTab}
+
                     >
-                        <div className={styles.tableHead}>
+                        <div className={AgendaHorario.tableHead}>
                             <table>
                                 <thead>
-                                    <tr className={styles.thCell}>
+                                    <tr className={AgendaHorario.thCell}>
                                         <th></th>
                                         <th>SEGUNDA-FEIRA</th>
                                         <th>TERÇA-FEIRA</th>
@@ -62,56 +43,56 @@ function FillExample() {
                                         <th>SEXTA-FEIRA</th>
                                         <th>SÁBADO</th>
                                         <th
-                                            className={styles.thCellBorder}>
+                                            className={AgendaHorario.thCellBorder}>
                                             DOMINGO
                                         </th>
                                     </tr>
                                 </thead>
 
                                 <tbody>
-                                    <tr className={styles.trCell}>
+                                    <tr className={AgendaHorario.trCell}>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <Select />
                                         </td>
-                                        <td className={styles.tdCell}>
+                                        <td className={AgendaHorario.tdCell}>
                                             <TableCell />
 
                                         </td>
 
 
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
                                         </td>
                                         <td
-                                            className={styles.tdCell}
-                                        >
-                                            <TableCell />
-
-                                        </td>
-                                        <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
+                                        >
+                                            <TableCell />
+
+                                        </td>
+                                        <td
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
@@ -120,51 +101,51 @@ function FillExample() {
                                 </tbody>
 
                                 <tbody>
-                                    <tr className={styles.trCell}>
+                                    <tr className={AgendaHorario.trCell}>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <Select />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
@@ -172,51 +153,51 @@ function FillExample() {
                                     </tr>
                                 </tbody>
                                 <tbody>
-                                    <tr className={styles.trCell}>
+                                    <tr className={AgendaHorario.trCell}>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <Select />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
@@ -224,51 +205,51 @@ function FillExample() {
                                     </tr>
                                 </tbody>
                                 <tbody>
-                                    <tr className={styles.trCell}>
+                                    <tr className={AgendaHorario.trCell}>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <Select />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
@@ -276,51 +257,51 @@ function FillExample() {
                                     </tr>
                                 </tbody>
                                 <tbody>
-                                    <tr className={styles.trCell}>
+                                    <tr className={AgendaHorario.trCell}>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <Select />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
-                                            className={styles.tdCell}
+                                            className={AgendaHorario.tdCell}
                                         >
                                             <TableCell />
 
@@ -335,9 +316,9 @@ function FillExample() {
                         eventKey="imc"
                         title="CALCULAR IMC"
                     >
-                        <div className={styles.mainIMC}>
-                            <div className={styles.contentImc}>
-                                <div className={styles.contentSeuImc}>
+                        <div className={CalculoImc.mainIMC}>
+                            <div className={CalculoImc.contentImc}>
+                                <div className={CalculoImc.contentSeuImc}>
                                     <table>
                                         <tr style={{ borderBottom: 'none' }}>
                                             <th style={{ borderBottom: 'none' }}>
@@ -374,13 +355,19 @@ function FillExample() {
                                             <td style={{ paddingLeft: '2vw', borderBottom: 'none' }}>Obeso</td>
                                         </tr>
                                         <caption>
-                                            <p>Taxa Metabólica Basal (TMB) / Índice de Massa Corporal (IMC) ?
+                                            <p>Taxa Metabólica Basal (TMB) / Índice de Massa Corporal (IMC)
+                                                <img
+                                                    className={CalculoImc.informaçãoAdicionalImage2}
+                                                    src='./moviment-academia-assets/agenda/imc/interrogacao.svg'
+                                                >
+
+                                                </img>
                                             </p>
                                         </caption>
                                     </table>
                                 </div>
 
-                                <div className={styles.contentCalculeImc}>
+                                <div className={CalculoImc.contentCalculeImc}>
 
                                     <h3>Calcule seu IMC</h3>
                                     <p>Ter um peso dentro do intervalo de peso ideal, ajuda a evitar o aparecimento de várias doenças crônicas, como diabetes e hipertensão.</p>
@@ -394,10 +381,10 @@ function FillExample() {
                                                 <p
                                                     style={{
                                                         borderBottom: '1px #cacaca solid',
-                                                        width: '70%'
+                                                        width: '80%'
                                                     }}>
                                                     <input
-                                                        className={styles.selectInput}
+                                                        className={CalculoImc.selectInput}
                                                         type="number"
                                                         min="0"
                                                         max="240"
@@ -412,10 +399,10 @@ function FillExample() {
                                                 <p
                                                     style={{
                                                         borderBottom: '1px #cacaca solid',
-                                                        width: '70%'
+                                                        width: '100%'
                                                     }}>
                                                     <input
-                                                        className={styles.selectInput}
+                                                        className={CalculoImc.selectInput}
                                                         type="number"
                                                         min="0"
                                                         max="240"
@@ -438,7 +425,7 @@ function FillExample() {
                                                     width: '70%'
                                                 }}>
                                                     <input
-                                                        className={styles.selectInput}
+                                                        className={CalculoImc.selectInput}
                                                         type="number"
                                                         min="0"
                                                         max="240"
@@ -451,11 +438,11 @@ function FillExample() {
                                             <td>
                                                 <p style={{
                                                     borderBottom: '1px #cacaca solid',
-                                                    width: '70%'
+                                                    width: '100%'
                                                 }}>
-                                                    <select className={styles.selectSexInput} id="pet-select">
-                                                        <option value="dog">HOMEM</option>
-                                                        <option value="cat">MULHER</option>
+                                                    <select className={CalculoImc.selectSexInput} id="pet-select">
+                                                        <option value="homem">HOMEM</option>
+                                                        <option value="mulher">MULHER</option>
 
                                                     </select>
                                                 </p>
@@ -465,98 +452,230 @@ function FillExample() {
 
                                     </table>
                                     <div>
-                                        <div>SELECIONE UM FATOR DE ATIVIDADE</div>
+                                        <div><p>SELECIONE UM FATOR DE ATIVIDADE</p></div>
                                     </div>
 
                                     <div>
                                         <div>
-                                            <select className={styles.selectSexInput} id="pet-select">
-                                                <option value="dog">HOMEM</option>
-                                                <option value="cat">MULHER</option>
-                                                <option value="cat">MULHER</option>
-                                                <option value="cat">MULHER</option>
+                                            <p
+                                                style={{
+                                                    borderBottom: '1px #cacaca solid',
+                                                    width: '100%'
+                                                }}>
+                                                <select className={CalculoImc.selectSexInput} id="work-select">
+                                                    <option
+                                                        value="muitoMovimento"
+                                                    >
+                                                        MEU TRABALHO É ME MOVIMENTAR
+                                                    </option>
+                                                    <option
+                                                        value="movimentoParcial"
+                                                    >
+                                                        TRABALHO UM POUCO PARADO UM POUCO MOVIMENTANDO
+                                                    </option>
+                                                    <option
+                                                        value="trabalhoSentado"
+                                                    >
+                                                        TRABALHO A MAIOR PARTE DO TEMPO SENTADO
+                                                    </option>
+                                                    <option
+                                                        value="trabalhoMuitoSentado"
+                                                    >
+                                                        SÓ LEVANTO PRA IR EMBORA
+                                                    </option>
+                                                </select>
+                                            </p>
 
-                                            </select>
                                         </div>
 
                                     </div>
                                     <span>
-                                        <button>
+                                        <button className={CalculoImc.buttonAgenda}>
                                             CALCULAR
                                         </button>
                                     </span>
                                 </div>
                             </div>
-                            <div className={styles.resultIMC2}>
-                                <img src="/moviment-academia-assets/agenda/imc/pessoa.svg" alt="imagem pessoa da academia moviment academia iracemápolis" />
+                            <div className={CalculoImc.resultIMC2}>
+                                <img
+                                    className={CalculoImc.iconePessoa}
+                                    src="/moviment-academia-assets/agenda/imc/pessoa.svg"
+                                    alt="imagem pessoa da academia moviment academia iracemápolis"
+                                />
                                 <div>
                                     <p>VOCÊ ESTÁ OBESO!</p>
-                                    <p>Seu ICM é de 31,62. Sua TMB está em 2.300 kcal/dia e TMB com seu fator  de atividade está em 2.800 kcal/dia ?</p>
+                                    <p>Seu ICM é de 31,62. Sua TMB está em 2.300 kcal/dia e TMB com seu fator  de atividade está em 2.800 kcal/dia
+                                        <img
+                                            className={CalculoImc.informaçãoAdicionalImage}
+                                            src='./moviment-academia-assets/agenda/imc/interrogacao.svg'
+                                        >
+
+                                        </img>
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </TabPane>
 
-                    {/* <TabPane
+                    <TabPane
                         eventKey="CALORIAS"
                         title="CALCULAR CALORIAS"
                     >
-                        <div className={styles.mainCalorias}>
-                            <div className={styles.resultadoContent}>
-                                <h3>Resultado:</h3>
-                                <p>Sua base de ingestão calórica diária é de 2504 kcal para chegar em seu objetivo.</p>
-                                <span>Linha horizontal</span>
-                                <p>Este é o numero de calorias diárias que deve ingerir para conseguir perder 35 kg, sem colocar a sua saúde em risco.</p>
-                                <p>À medida que vai emagrecendo e chegando mais perto do peso que deseja, deve recalcular o número de calorias que pode ingerir por dia para acelerar o processo de emagrecimento. Para isso, basta preencher novamente a calculadora com os seus dados atualizados.</p>
-                                <p>
-                                    <img
-                                        src="/moviment-academia-assets/agenda/calorias/caution.svg"
-                                        alt="Cuidado, aviso de cuidado para que as pessoas fiquem alertas a mensagem passada"
-                                    />
-                                    ATENÇÃO: é importante ressaltar que a quantidade de calorias também deve variar de acordo com o estado de saúde, metabolismo e produção de hormônios de cada pessoa.
-                                </p>
-                                <p>
-                                    Essa Calculadora não leva em consideração a realidade alimentar e a saúde dos indivíduos e não deve ser usada como única fonte de informação para sua saúde.
+                        <div className={CalculoCalorias.mainCalorias}>
+                            <div className={CalculoCalorias.resultadoContent}>
+                                <div>
+                                    <h3>Resultado:</h3>
+                                    <p>
+                                        Sua base de ingestão calórica diária é de 2504 kcal para chegar em seu objetivo.
 
-                                </p>
-                                <p>
-                                    Por isso, para confirmar a quantidade diária de ingestão calórica é sempre aconselhada a consulta com um nutricionista.
-                                </p>
+
+                                    </p>
+                                    <span></span>
+                                    <p>Este é o numero de calorias diárias que deve ingerir para conseguir perder 35 kg, sem colocar a sua saúde em risco.</p>
+                                    <p>À medida que vai emagrecendo e chegando mais perto do peso que deseja, deve recalcular o número de calorias que pode ingerir por dia para acelerar o processo de emagrecimento. Para isso, basta preencher novamente a calculadora com os seus dados atualizados.</p>
+                                    <p>
+                                        <img
+                                            src="/moviment-academia-assets/agenda/calorias/caution.svg"
+                                            alt="Cuidado, aviso de cuidado para que as pessoas fiquem alertas a mensagem passada"
+                                        />
+                                        ATENÇÃO: é importante ressaltar que a quantidade de calorias também deve variar de acordo com o estado de saúde, metabolismo e produção de hormônios de cada pessoa.
+                                    </p>
+                                    <p>
+                                        Essa Calculadora não leva em consideração a realidade alimentar e a saúde dos indivíduos e não deve ser usada como única fonte de informação para sua saúde.
+
+                                    </p>
+                                    <p>
+                                        Por isso, para confirmar a quantidade diária de ingestão calórica é sempre aconselhada a consulta com um nutricionista.
+                                    </p>
+                                </div>
                             </div>
 
-                            <div className={styles.formerContent}>
+
+                            <div className={CalculoCalorias.formerContent}>
                                 <h3>
                                     Calcular Calorias Diárias
                                 </h3>
-                                <p>
-                                    Calcular calorias diárias é uma forma bastante popular de se manter no peso, engordar ou emagrecer. Com essa calculadora é possível ter uma base de quantas calorias é preciso para chegar ao seu objetivo. ?
+                                <p style={{ width: '80%' }}>
+                                    Calcular calorias diárias é uma forma bastante popular de se manter no peso, engordar ou emagrecer. Com essa calculadora é possível ter uma base de quantas calorias é preciso para chegar ao seu objetivo.
+                                    <img
+
+                                        src='./moviment-academia-assets/agenda/imc/interrogacao.svg'
+                                    >
+
+                                    </img>
                                 </p>
-                                <div>
-                                    <div>
-                                        <h5>ALTURA</h5>
-                                        <p>175</p>
-                                        <h5>idade</h5>
-                                        <p>35</p>
-                                    </div>
-                                    <div>
-                                        <h5>PESO/KG</h5>
-                                        <p>90</p>
-                                        <h5>SEXO</h5>
-                                        <p>HOMEm</p>
-                                    </div>
-                                </div>
+                                <table>
+                                    <tr>
+                                        <th>ALTURA(CM)</th>
+                                        <th>PESO/KG</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p
+                                                style={{
+                                                    borderBottom: '1px #cacaca solid',
+                                                    width: '90%',
+                                                    marginTop: '7px',
+                                                }}>
+                                                <input
+                                                    className={CalculoImc.selectInput}
+                                                    type="number"
+                                                    min="0"
+                                                    max="240"
+                                                    placeholder='Exemplo: 180'
+                                                    required
+                                                />
+
+                                            </p>
+                                        </td>
+
+                                        <td>
+                                            <p
+                                                style={{
+                                                    borderBottom: '1px #cacaca solid',
+                                                    width: '100%',
+                                                    marginTop: '7px',
+
+                                                }}>
+                                                <input
+                                                    className={CalculoImc.selectInput}
+                                                    type="number"
+                                                    min="0"
+                                                    max="240"
+                                                    placeholder='Exemplo: 70'
+                                                    required
+                                                />
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>IDADE</th>
+
+                                        <th>SEXO</th>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p style={{
+                                                borderBottom: '1px #cacaca solid',
+                                                width: '90%',
+                                                marginTop: '7px',
+
+                                            }}>
+                                                <input
+                                                    className={CalculoImc.selectInput}
+                                                    type="number"
+                                                    min="0"
+                                                    max="240"
+                                                    placeholder='Exemplo: 22'
+                                                    required
+                                                />
+                                            </p>
+                                        </td>
+
+                                        <td>
+                                            <p style={{
+                                                borderBottom: '1px #cacaca solid',
+                                                width: '100%',
+                                                marginTop: '7px',
+
+                                            }}>
+                                                <select className={CalculoImc.selectSexInput} id="pet-select">
+                                                    <option value="homem">HOMEM</option>
+                                                    <option value="mulher">MULHER</option>
+
+                                                </select>
+                                            </p>
+                                        </td>
+                                    </tr>
+
+
+                                </table>
+
                                 <div>
                                     <span>
-                                        <h5>SELECIONE SEU OBJETIVO</h5>
-                                        <p>QUERO EMAGRECER</p>
+                                        <p>SELECIONE SEU OBJETIVO:</p>
+                                        <select className={CalculoImc.selectSexInput} id="pet-select">
+                                            <option value="homem">HOMEM</option>
+                                            <option value="mulher">MULHER</option>
+
+                                        </select>
                                     </span>
                                     <span>
-                                        <h5>SELECIONE SEU TIPO DE EMPREGO</h5>
-                                        <p>POUCO OU NENHUM EXERCÍCIO/TRABALHO SENTADO</p>
+                                        <p>SELECIONE SEU TIPO DE EMPREGO:</p>
+                                        <select className={CalculoImc.selectSexInput} id="pet-select">
+                                            <option value="homem">HOMEM</option>
+                                            <option value="mulher">MULHER</option>
+
+                                        </select>
                                     </span>
                                     <span>
-                                        <h5>SELECIONE SEU EXERCÍCIO SEMANAL:</h5>
-                                        <p>POUCO OU NENHUM EXERCÍCIO FÍSICO</p>
+                                        <p>SELECIONE SEU EXERCÍCIO SEMANAL:</p>
+                                        <select className={CalculoImc.selectSexInput} id="pet-select">
+                                            <option value="homem">HOMEM</option>
+                                            <option value="mulher">MULHER</option>
+
+                                        </select>
                                     </span>
                                     <div>
                                         <button>
@@ -566,7 +685,7 @@ function FillExample() {
                                 </div>
                             </div>
                         </div>
-                    </TabPane> */}
+                    </TabPane>
                 </Tabs>
             </div>
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './../../../agenda.module.css'
+import styles from './tableCell.module.css'
 
 const TableCell = () => {
     const [textInputs, setTextInputs] = useState(['']);
