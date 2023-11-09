@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import styles from './agenda.module.css'
 import TabPane from 'react-bootstrap/TabPane';
 import Tabs from 'react-bootstrap/Tabs';
+import Form from 'react-bootstrap/Form';
 import Select from './Components/agenda/Select/Select'
 import TableCell from './Components/agenda/table/tableCell';
 
@@ -381,9 +382,9 @@ function FillExample() {
 
                                 <div className={styles.contentCalculeImc}>
 
+                                    <h3>Calcule seu IMC</h3>
+                                    <p>Ter um peso dentro do intervalo de peso ideal, ajuda a evitar o aparecimento de várias doenças crônicas, como diabetes e hipertensão.</p>
                                     <table>
-                                        <h3>Calcule seu IMC</h3>
-                                        <p>Ter um peso dentro do intervalo de peso ideal, ajuda a evitar o aparecimento de várias doenças crônicas, como diabetes e hipertensão.</p>
                                         <tr>
                                             <th>ALTURA(CM)</th>
                                             <th>PESO/KG</th>
@@ -395,7 +396,15 @@ function FillExample() {
                                                         borderBottom: '1px #cacaca solid',
                                                         width: '70%'
                                                     }}>
-                                                    175
+                                                    <input
+                                                        className={styles.selectInput}
+                                                        type="number"
+                                                        min="0"
+                                                        max="240"
+                                                        placeholder='Exemplo: 180'
+                                                        required
+                                                    />
+
                                                 </p>
                                             </td>
 
@@ -405,7 +414,14 @@ function FillExample() {
                                                         borderBottom: '1px #cacaca solid',
                                                         width: '70%'
                                                     }}>
-                                                    90
+                                                    <input
+                                                        className={styles.selectInput}
+                                                        type="number"
+                                                        min="0"
+                                                        max="240"
+                                                        placeholder='Exemplo: 70'
+                                                        required
+                                                    />
                                                 </p>
                                             </td>
                                         </tr>
@@ -419,34 +435,51 @@ function FillExample() {
                                             <td>
                                                 <p style={{
                                                     borderBottom: '1px #cacaca solid',
-                                                    width: '80%'
+                                                    width: '70%'
                                                 }}>
-                                                    35
+                                                    <input
+                                                        className={styles.selectInput}
+                                                        type="number"
+                                                        min="0"
+                                                        max="240"
+                                                        placeholder='Exemplo: 22'
+                                                        required
+                                                    />
                                                 </p>
                                             </td>
 
                                             <td>
                                                 <p style={{
                                                     borderBottom: '1px #cacaca solid',
-                                                    width: '80%'
+                                                    width: '70%'
                                                 }}>
-                                                    HOMEM
+                                                    <select className={styles.selectSexInput} id="pet-select">
+                                                        <option value="dog">HOMEM</option>
+                                                        <option value="cat">MULHER</option>
+
+                                                    </select>
                                                 </p>
                                             </td>
                                         </tr>
 
 
-                                        <tr>
-                                            <th>SELECIONE UM FATOR DE ATIVIDADE</th>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                POUCO OU NENHUM EXERCÍCIO/TRABALHO SENTADO
-                                            </td>
-
-                                        </tr>
                                     </table>
+                                    <div>
+                                        <div>SELECIONE UM FATOR DE ATIVIDADE</div>
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <select className={styles.selectSexInput} id="pet-select">
+                                                <option value="dog">HOMEM</option>
+                                                <option value="cat">MULHER</option>
+                                                <option value="cat">MULHER</option>
+                                                <option value="cat">MULHER</option>
+
+                                            </select>
+                                        </div>
+
+                                    </div>
                                     <span>
                                         <button>
                                             CALCULAR
@@ -454,13 +487,11 @@ function FillExample() {
                                     </span>
                                 </div>
                             </div>
-                            <div className={styles.resultIMC}>
-                                <div className={styles.resultIMC2}>
-                                    <img src="/moviment-academia-assets/agenda/imc/pessoa.svg" alt="imagem pessoa da academia moviment academia iracemápolis" />
-                                    <div>
-                                        <p>VOCÊ ESTÁ OBESO!</p>
-                                        <p>Seu ICM é de 31,62. Sua TMB está em 2.300 kcal/dia e TMB com seu fator  de atividade está em 2.800 kcal/dia ?</p>
-                                    </div>
+                            <div className={styles.resultIMC2}>
+                                <img src="/moviment-academia-assets/agenda/imc/pessoa.svg" alt="imagem pessoa da academia moviment academia iracemápolis" />
+                                <div>
+                                    <p>VOCÊ ESTÁ OBESO!</p>
+                                    <p>Seu ICM é de 31,62. Sua TMB está em 2.300 kcal/dia e TMB com seu fator  de atividade está em 2.800 kcal/dia ?</p>
                                 </div>
                             </div>
                         </div>

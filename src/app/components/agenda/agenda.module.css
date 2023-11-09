@@ -4,6 +4,10 @@
     border: red 1px solid;
 }
 
+.main{
+    margin-bottom: 130px;
+}
+
 .main {
     display: flex;
     flex-direction: column;
@@ -30,6 +34,7 @@
 .tableHead table {
     width: 60%;
     margin: auto;
+    height: 200px;
 }
 
 .thCell {
@@ -110,10 +115,11 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 100px;
 }
 
 .mainIMC {
-    width: 80%;
+    width: 60%;
     margin: auto;
 }
 
@@ -133,9 +139,13 @@
 
 }
 
+.contentSeuImc{
+    width: 100%;
+}
+
 .contentSeuImc th {
     border-bottom: 1px #cacaca solid;
-    height: 8vh;
+    height: 5vh;
 
 }
 
@@ -177,16 +187,33 @@
     gap: 20px;
     margin: auto;
     margin: 5px;
-    justify-content: center;
-    width: 73%;
+    justify-content: flex-start;
+    width: 100%;
 }
 
 .resultIMC {}
 
 .resultIMC div {
-    margin-top: 20px;
+    padding: 10px;
 }
 
-.resultIMC img {
-    width: 2vw;
+.resultIMC2 img {
+    width: 1.5vw;
+}
+
+.selectInput{
+    width: 70%;
+    font-style: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.selectSexInput{
+    font-style: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    outline: none;
 }
