@@ -29,7 +29,7 @@ function FillExample() {
                     <TabPane
                         eventKey="agenda"
                         title="AGENDA DE HORÁRIOS"
-
+                        style={{ marginTop: '60px' }}
                     >
                         <div className={AgendaHorario.tableHead}>
                             <table>
@@ -43,7 +43,7 @@ function FillExample() {
                                         <th>SEXTA-FEIRA</th>
                                         <th>SÁBADO</th>
                                         <th
-                                            className={AgendaHorario.thCellBorder}>
+                                            style={{ borderRight: 'none' }}>
                                             DOMINGO
                                         </th>
                                     </tr>
@@ -93,6 +93,7 @@ function FillExample() {
                                         </td>
                                         <td
                                             className={AgendaHorario.tdCell}
+                                            style={{ borderRight: 'none' }}
                                         >
                                             <TableCell />
 
@@ -146,6 +147,7 @@ function FillExample() {
                                         </td>
                                         <td
                                             className={AgendaHorario.tdCell}
+                                            style={{ borderRight: 'none' }}
                                         >
                                             <TableCell />
 
@@ -198,6 +200,7 @@ function FillExample() {
                                         </td>
                                         <td
                                             className={AgendaHorario.tdCell}
+                                            style={{ borderRight: 'none' }}
                                         >
                                             <TableCell />
 
@@ -250,6 +253,7 @@ function FillExample() {
                                         </td>
                                         <td
                                             className={AgendaHorario.tdCell}
+                                            style={{ borderRight: 'none' }}
                                         >
                                             <TableCell />
 
@@ -260,48 +264,56 @@ function FillExample() {
                                     <tr className={AgendaHorario.trCell}>
                                         <td
                                             className={AgendaHorario.tdCell}
+                                            style={{ borderBottom: 'none' }}
                                         >
                                             <Select />
 
                                         </td>
                                         <td
                                             className={AgendaHorario.tdCell}
+                                            style={{ borderBottom: 'none' }}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
                                             className={AgendaHorario.tdCell}
+                                            style={{ borderBottom: 'none' }}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
                                             className={AgendaHorario.tdCell}
+                                            style={{ borderBottom: 'none' }}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
                                             className={AgendaHorario.tdCell}
+                                            style={{ borderBottom: 'none' }}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
                                             className={AgendaHorario.tdCell}
+                                            style={{ borderBottom: 'none' }}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
                                             className={AgendaHorario.tdCell}
+                                            style={{ borderBottom: 'none' }}
                                         >
                                             <TableCell />
 
                                         </td>
                                         <td
                                             className={AgendaHorario.tdCell}
+                                            style={{ borderRight: 'none', borderBottom: 'none' }}
                                         >
                                             <TableCell />
 
@@ -315,6 +327,7 @@ function FillExample() {
                     <TabPane
                         eventKey="imc"
                         title="CALCULAR IMC"
+                        style={{ marginTop: '60px' }}
                     >
                         <div className={CalculoImc.mainIMC}>
                             <div className={CalculoImc.contentImc}>
@@ -322,7 +335,7 @@ function FillExample() {
                                     <table>
                                         <tr style={{ borderBottom: 'none' }}>
                                             <th style={{ borderBottom: 'none' }}>
-                                                <h2 style={{ textAlign: 'left', height: '1vw' }}>SEU IMC</h2>
+                                                <h3 style={{ textAlign: 'left' }}>SEU IMC</h3>
 
                                             </th>
                                         </tr>
@@ -520,6 +533,7 @@ function FillExample() {
                     <TabPane
                         eventKey="CALORIAS"
                         title="CALCULAR CALORIAS"
+                        style={{ marginTop: '60px' }}
                     >
                         <div className={CalculoCalorias.mainCalorias}>
                             <div className={CalculoCalorias.resultadoContent}>
@@ -640,7 +654,11 @@ function FillExample() {
                                                 marginTop: '7px',
 
                                             }}>
-                                                <select className={CalculoImc.selectSexInput} id="pet-select">
+                                                <select
+                                                    className={CalculoImc.selectSexInput}
+                                                    id="pet-select"
+
+                                                >
                                                     <option value="homem">HOMEM</option>
                                                     <option value="mulher">MULHER</option>
 
@@ -653,35 +671,47 @@ function FillExample() {
                                 </table>
 
                                 <div>
-                                    <span>
-                                        <p>SELECIONE SEU OBJETIVO:</p>
-                                        <select className={CalculoImc.selectSexInput} id="pet-select">
-                                            <option value="homem">HOMEM</option>
-                                            <option value="mulher">MULHER</option>
-
-                                        </select>
-                                    </span>
-                                    <span>
-                                        <p>SELECIONE SEU TIPO DE EMPREGO:</p>
-                                        <select className={CalculoImc.selectSexInput} id="pet-select">
-                                            <option value="homem">HOMEM</option>
-                                            <option value="mulher">MULHER</option>
-
-                                        </select>
-                                    </span>
-                                    <span>
-                                        <p>SELECIONE SEU EXERCÍCIO SEMANAL:</p>
-                                        <select className={CalculoImc.selectSexInput} id="pet-select">
-                                            <option value="homem">HOMEM</option>
-                                            <option value="mulher">MULHER</option>
-
-                                        </select>
-                                    </span>
                                     <div>
-                                        <button>
+                                        <p>SELECIONE SEU OBJETIVO:</p>
+                                        <select
+                                            className={CalculoCalorias.selectSexInput}
+                                            id="pet-select"
+                                            style={{borderBottom:'1px #cacaca solid'}}
+                                        >
+                                            <option value="homem">QUERO EMAGRECER</option>
+                                            <option value="mulher">QUERO ENGORDAR</option>
+
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <p>SELECIONE SEU TIPO DE EMPREGO:</p>
+                                        <select
+                                            className={CalculoCalorias.selectSexInput}
+                                            id="pet-select"
+                                            style={{borderBottom:'1px #cacaca solid'}}
+                                        >
+                                            <option value="homem">POUCO OU NENHUM EXERCÍCIO</option>
+                                            <option value="mulher">BASTANTE OU MUITO EXERCÍCIO</option>
+
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <p>SELECIONE SEU EXERCÍCIO SEMANAL:</p>
+                                        <select
+                                            className={CalculoCalorias.selectSexInput}
+                                            id="pet-select"
+                                            style={{borderBottom:'1px #cacaca solid'}}
+                                        >
+                                            <option value="homem">POUCO OU NENHUM</option>
+                                            <option value="mulher">BASTANTE OU MUITO</option>
+
+                                        </select>
+                                    </div>
+                                    <span>
+                                        <button className={CalculoCalorias.buttonCalculoCalorias}>
                                             CALCULAR
                                         </button>
-                                    </div>
+                                    </span>
                                 </div>
                             </div>
                         </div>

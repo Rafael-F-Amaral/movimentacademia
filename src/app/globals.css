@@ -24,18 +24,14 @@ input[type=number] {
 
 a {
     text-decoration: none !important;
-    /* Remove o sublinhado padrão */
     color: white !important;
-    /* Herda a cor do texto padrão */
     cursor: pointer;
 }
 
 
 body {
     font-family: Arial, sans-serif;
-    /* font-size: 16px;
-    line-height: 1.5;
-    scrollbar-width: thin; */
+
 }
 
 .swiper-button-next,

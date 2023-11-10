@@ -12,6 +12,12 @@
     margin: auto;
 }
 
+.thCellBorder{
+    border-right: none;
+    background-color: red;
+}
+
+
 .thCell th {
     border-bottom: white 2px solid;
     border-right: white 2px solid;

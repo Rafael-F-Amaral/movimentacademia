@@ -36,13 +36,13 @@
 }
 
 
-
 /*RESULTADO CALORIAS*/
+
 
 
 /*CALCULADORA CALORIAS*/
 
-.formerContent{
+.formerContent {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -65,9 +65,38 @@
 
 }
 
-.formerContent table{
+.formerContent table {
     width: 100%;
 }
 
+.buttonCalculoCalorias {
+    background-color: #EC3138;
+    font-size: 1.2em;
+    font-weight: 700;
+    width: 25%;
+    height: 25%;
+    text-align: center;
+    margin-top: 1%;
+
+}
+
+
+.buttonAgenda:hover {
+    color: white;
+    background-color: #ea272d;
+}
+
+.selectSexInput {
+    border-bottom: 1px #cacaca solid;
+    width: 100%;
+    margin-bottom: 1.5em;
+    font-style: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+
+}
 
 /*CALCULADORA CALORIAS*/
